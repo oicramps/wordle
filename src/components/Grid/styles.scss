@@ -1,0 +1,46 @@
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+
+    &--active {
+      .grid__cell {
+        border-color: #d5d5d5
+      }
+    }
+  }
+
+  &__cell {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 16px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #3a3a3c;
+
+    &--filled {
+      background-color: #3a3a3c;
+    }
+
+    &--success {
+      background-color: #538d4e;
+      border-color: #538d4e;
+    }
+
+    &--warning {
+      background-color: #b59f3b;
+      border-color: #b59f3b;
+    }
+  }
+}
